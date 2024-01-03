@@ -3,6 +3,9 @@
 Type-safe Dependency Injection Extra helper functions (Most decorator based)
 
 
+[![CI](https://github.com/thaitype/di-extra/actions/workflows/main.yml/badge.svg)](https://github.com/thaitype/di-extra/actions/workflows/main.yml)
+
+
 | Package                                   | npm                                                                                                                   | Description                                                       |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [@di-extra/inversify](packages/inversify) | [![npm version](https://img.shields.io/npm/v/@di-extra/inversify)](https://www.npmjs.com/package/@di-extra/inversify) | Type-safe Dependency Injection Wrapper for [inversify][inversify] |
@@ -80,3 +83,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 [inversify]: https://github.com/inversify/InversifyJS
+
+<!-- https://dev.to/matteobruni/mochachai-with-typescript-2023-update-281f -->
