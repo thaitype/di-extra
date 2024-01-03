@@ -17,14 +17,10 @@ npm install @di-extra/inversify
 See [full example in example/inversify](https://github.com/thaitype/di-extra/tree/main/examples/inversify)
 
 ```typescript
+import 'reflect-metadata';
 import { container } from './container';
 import { injector } from '@di-extra/inversify';
-import 'reflect-metadata';
-import { DataService } from './services/data';
-import { Service } from './services/service';
-import { Tokens } from './constants';
-import { Option } from './types';
-import { injector } from '@di-extra/inversify';
+// Import all related dependencies services
 
 injector(container)
   .inject('dataService', DataService).to<DataService>()
