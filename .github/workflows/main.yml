@@ -1,8 +1,16 @@
-name: CI
+name: "Build & Test"
+
 on:
   push:
-    branches:
-      - "**"
+    branches: [ main ]
+    paths-ignore:
+      - '**/*.md'
+      - '.github'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - '**/*.md'
+      - '.github'
 
 jobs:
   build:
