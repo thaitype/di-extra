@@ -2,6 +2,8 @@
 
 Type-safe Dependency Injection Extra helper functions (Most decorator based)
 
+[![CI](https://github.com/thaitype/di-extra/actions/workflows/main.yml/badge.svg)](https://github.com/thaitype/di-extra/actions/workflows/main.yml)
+
 
 | Package                                   | npm                                                                                                                   | Description                                                       |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
