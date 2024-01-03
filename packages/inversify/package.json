@@ -2,8 +2,16 @@
   "name": "@di-extra/inversify",
   "version": "0.0.0",
   "description": "Type-safe Dependency Injection Wrapper for inversify",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "./dist/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "default": "./dist/main.js"
+    }
+  },
   "scripts": {
     "all": "run-s  build lint",
     "build": "tsup src/main.ts --dts --format esm,cjs",
@@ -11,6 +19,10 @@
     "test": "ava",
     "dev": "nodemon --watch src --ext ts --exec 'npm run build'"
   },
+  "files": [
+    "dist/**",
+    "src/**"
+  ],
   "keywords": [
     "inversify",
     "dependency-injection",
