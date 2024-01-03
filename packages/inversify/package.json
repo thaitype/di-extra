@@ -12,8 +12,9 @@
     "dev": "nodemon --watch src --ext ts --exec 'npm run build'"
   },
   "keywords": [
-    "azure-functions",
-    "azure"
+    "inversify",
+    "dependency-injection",
+    "typescript"
   ],
   "author": "Thada Wangthammang",
   "license": "MIT",

@@ -16,11 +16,7 @@
     "dist/**",
     "src/**"
   ],
-  "scripts": {
-    "dev": "pnpm --filter \"@di-extra/inversify\" dev",
-    "all": "pnpm --filter \"@di-extra/inversify\" all",
-    "release": "npm run all && changeset publish"
-  },
+  "scripts": {},
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
     "@types/node": "^18.11.18",
@@ -28,10 +24,12 @@
     "@typescript-eslint/parser": "^6.7.5",
     "ava": "^5.1.1",
     "c8": "^7.12.0",
+    "esbuild": "^0.19.11",
     "esbuild-register": "^3.4.2",
+    "eslint": "^8.56.0",
+    "execa": "^8.0.1",
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.3",
     "tsup": "^6.6.3",
     "typescript": "^5.0.2"
   },
@@ -53,7 +51,5 @@
     "require": [
       "esbuild-register"
     ]
-  },
-  "dependencies": {
   }
 }
