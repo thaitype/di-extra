@@ -12,6 +12,10 @@ export type ReleaseType = 'major' | 'minor' | 'patch' | 'alpha';
  * e.g. 
  *   - inversify -> git tag `inversify/v1.0.0`, npm package `@di-extra/inversify` version: `1.0.0` 
  *   - tsyringe -> git tag `tsyringe/v1.0.0`, npm package `@di-extra/tsyringe` version: `1.0.0`
+ * 
+ * pnpm publish --access public
+ * git tag -a inversify/v0.0.0 -m "@di-extra/inversify v0.0.0"
+ * git push origin --tags
  */
 
 async function main() {
