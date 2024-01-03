@@ -1,6 +1,6 @@
 {
   "name": "@di-extra/inversify",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Type-safe Dependency Injection Wrapper for inversify",
   "main": "./dist/main.js",
   "module": "./dist/main.mjs",
