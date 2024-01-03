@@ -1,6 +1,8 @@
 # @di-extra/inversify
 
-Type-safe Dependency Injection Wrapper for inversify
+Type-safe Dependency Injection Wrapper for [inversify](https://github.com/inversify/InversifyJS)
+
+> Currently, support inversify v6 
 
 ## Getting Started
 

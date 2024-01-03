@@ -3,9 +3,9 @@
 Type-safe Dependency Injection Extra helper functions (Most decorator based)
 
 
-| Package                                   | npm                                                                                                                   | Description                                          |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [@di-extra/inversify](packages/inversify) | [![npm version](https://img.shields.io/npm/v/@di-extra/inversify)](https://www.npmjs.com/package/@di-extra/inversify) | Type-safe Dependency Injection Wrapper for inversify |
+| Package                                   | npm                                                                                                                   | Description                                                       |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [@di-extra/inversify](packages/inversify) | [![npm version](https://img.shields.io/npm/v/@di-extra/inversify)](https://www.npmjs.com/package/@di-extra/inversify) | Type-safe Dependency Injection Wrapper for [inversify][inversify] |
 
 > May be support most popluar DI container in future release, e.g. tsyringe
 
@@ -68,7 +68,7 @@ Follow these steps to use di-extra in your project:
 
 The documentation for the `di-extra` library does not cover the fundamentals of Dependency Injection (DI) usage. To effectively utilize the DI features provided by this library, it is crucial to refer to the original documentation of the specific DI container packages.
 
-Please consult the original documentation of the respective packages, such as [Inversify]([Inversify](https://github.com/inversify/InversifyJS)), to gain a comprehensive understanding of how to use Dependency Injection in your TypeScript projects. The `di-extra` documentation primarily focuses on the additional functionalities and improvements it brings to the DI experience, assuming a foundational knowledge of DI principles.
+Please consult the original documentation of the respective packages, such as [Inversify]([Inversify][inversify]), to gain a comprehensive understanding of how to use Dependency Injection in your TypeScript projects. The `di-extra` documentation primarily focuses on the additional functionalities and improvements it brings to the DI experience, assuming a foundational knowledge of DI principles.
 
 Be sure to review the documentation of the underlying DI container used in conjunction with `di-extra` for a complete guide on DI configuration, best practices, and usage specifics.
 
@@ -77,3 +77,6 @@ If you want to contribute to this project, feel free to open issues or submit pu
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+[inversify]: https://github.com/inversify/InversifyJS
