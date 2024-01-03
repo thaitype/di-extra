@@ -1,0 +1,32 @@
+{
+  "name": "@di-extra/inversify",
+  "version": "0.0.0",
+  "description": "Type-safe Dependency Injection Wrapper for inversify",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "all": "run-s  build lint",
+    "build": "tsup src/main.ts --dts --format esm,cjs",
+    "lint": "tsc --noEmit",
+    "test": "ava",
+    "dev": "nodemon --watch src --ext ts --exec 'npm run build'"
+  },
+  "keywords": [
+    "azure-functions",
+    "azure"
+  ],
+  "author": "Thada Wangthammang",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thaitype/inversify.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "@di-extra/inversify",
+  "version": "0.0.1",
+  "description": "tRPC Azure Functions Adapter",
+  "main": "./dist/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "default": "./dist/main.js"
+    }
+  },
+  "files": [
+    "dist/**",
+    "src/**"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter \"@di-extra/inversify\" dev",
+    "all": "pnpm --filter \"@di-extra/inversify\" all",
+    "release": "npm run all && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "ava": "^5.1.1",
+    "c8": "^7.12.0",
+    "esbuild-register": "^3.4.2",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.3",
+    "tsup": "^6.6.3",
+    "typescript": "^5.0.2"
+  },
+  "keywords": [],
+  "author": "Thada Wangthammang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thaitype/inversify.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "esbuild-register"
+    ]
+  },
+  "dependencies": {
+  }
+}
