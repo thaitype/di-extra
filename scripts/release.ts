@@ -1,12 +1,22 @@
+// Adatped from thaitype/nammatham
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { copyReadmeFromRoot, execute, modifyAllDependencies, modifyPackagesVersion, modifyVersion, readPackageJson } from './libs';
+import { execute, modifyAllDependencies, modifyPackagesVersion, modifyVersion, readPackageJson } from './libs';
 
 export type ReleaseType = 'major' | 'minor' | 'patch' | 'alpha';
 
+/**
+ * Release policy:
+ * 
+ * - Separate packages version
+ * e.g. 
+ *   - inversify -> git tag `inversify/v1.0.0`, npm package `@di-extra/inversify` version: `1.0.0` 
+ *   - tsyringe -> git tag `tsyringe/v1.0.0`, npm package `@di-extra/tsyringe` version: `1.0.0`
+ */
+
 async function main() {
   const dryRun = process.env.DRY_RUN === 'true';
-  const releaseType: ReleaseType = 'alpha'; // TODO: use @inquirer/prompts to select release type later
+  const releaseType: ReleaseType = 'patch'; // TODO: use @inquirer/prompts to select release type later
   console.log(`Starting release nammatham... ${dryRun ? 'with dry-run' : ''}`);
   const { version } = await readPackageJson(process.cwd());
   console.log(`Current version: ${version}`);
@@ -15,7 +25,6 @@ async function main() {
   await modifyAllDependencies(newVersion, { directories: ['examples', 'packages'] });
   await modifyVersion(process.cwd(), newVersion);
   await modifyPackagesVersion({ version: newVersion, directories: [path.resolve('packages')] });
-  await copyReadmeFromRoot({ directories: ['packages'] });
   await execute('git', ['add', '.'], { dryRun });
   await execute('git', ['commit', '-m', `Bump version v${newVersion}`], { dryRun });
   await publishPackages({

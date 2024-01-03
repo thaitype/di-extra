@@ -19,6 +19,7 @@
   "author": "Thada Wangthammang",
   "license": "MIT",
   "dependencies": {
+    "inversify": "^6.0.2"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 {
-  "name": "@di-extra/inversify",
+  "name": "@di-extra/mono",
   "version": "0.0.1",
   "description": "tRPC Azure Functions Adapter",
   "main": "./dist/main.js",
