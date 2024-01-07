@@ -1,4 +1,5 @@
-import { interfaces, Container } from 'inversify';
+import { interfaces } from 'inversify';
+import { Container } from './container';
 type InversifyProviderFunc<T extends Record<string, unknown>, TReturn> = (services: T) => TReturn;
 
 // eslint-disable-next-line @typescript-eslint/ban-types

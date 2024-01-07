@@ -1,5 +1,5 @@
 import { inject, injectable } from 'inversify';
-import { DataService } from './data';
+import { DataService } from './data-service';
 
 @injectable()
 export class Service {
