@@ -15,12 +15,20 @@ class InversifyProvider<Items extends Record<string, interfaces.ServiceIdentifie
     return new Injection<OutputType, Name, Items>(this, name);
   }
 
-  resolve<TReturn>(func: InversifyProviderFunc<Items, TReturn>): TReturn {
+  resolver<TReturn>(func: InversifyProviderFunc<Items, TReturn>): TReturn {
     const services: Record<string, unknown> = {};
     Object.keys(this.items).forEach(key => {
       services[key] = this.container.get(this.items[key]);
     });
     return func(services as Items & Record<string, unknown>);
+  }
+
+  resolve(): Items {
+    const services: Record<string, unknown> = {};
+    Object.keys(this.items).forEach(key => {
+      services[key] = this.container.get(this.items[key]);
+    });
+    return services as Items;
   }
 }
 

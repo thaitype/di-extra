@@ -16,6 +16,7 @@ Type-safe Dependency Injection Extra helper functions (Most decorator based)
 When working with Dependency Injection (DI) in TypeScript, maintaining type safety becomes a crucial concern, especially when relying on decorator-based approaches. The decorator-based DI, as demonstrated below, introduces challenges in achieving optimal type safety:
 
 ```typescript
+import 'reflect-metadata';
 import { inject, injectable } from 'inversify';
 // Import all related dependencies services
 
@@ -46,7 +47,7 @@ injector(container)
   .inject('dataService', DataService).to<DataService>()
   .inject('service', Service).to<Service>()
   .inject('option', Tokens.Option).to<Option>()
-  .resolve(({ dataService, service, option }) => {
+  .resolver(({ dataService, service, option }) => {
       console.log(`service.getData()`, service.getData());
       console.log(`dataService.getData()`, dataService.getData());
       console.log(`option`, option);
